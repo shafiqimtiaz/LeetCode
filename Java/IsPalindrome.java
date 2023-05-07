@@ -1,20 +1,5 @@
 public class IsPalindrome {
 
-    public static void main(String[] args) {
-        int[] arr1 = new int[]{121, 234, 67676, 987789};
-        for (int i : arr1) {
-            System.out.println(i + " - " + isPalindromeNum(i));
-        }
-
-        String[] arr2 = new String[]{"hoobla", "magic", "adda", "nun"};
-        for (String s : arr2) {
-            System.out.println(s + " - " + isPalindromeStr(s));
-        }
-        String str = "A man, a plan, a canal: Panama";
-        System.out.println(str + " - " + isPalindromeStr(str));
-        System.out.println(str + " - " + isPalindromeStr2(str));
-    }
-
     public static boolean isPalindromeNum(int x) {
         if (x == 0) return true;
         int rem = 0, rev = 0;
@@ -52,5 +37,20 @@ public class IsPalindrome {
             left++;
         }
         return true;
+    }
+
+    public static void main(String[] args) {
+        int[] arr1 = new int[]{121, 234, 67676, 987789};
+        for (int i : arr1) {
+            System.out.println(i + " - " + isPalindromeNum(i));
+        }
+
+        String[] arr2 = new String[]{"hoobla", "magic", "adda", "nun"};
+        for (String s : arr2) {
+            System.out.println(s + " - " + isPalindromeStr(s));
+        }
+        String str = "A man, a plan, a canal: Panama";
+        System.out.println(str + " - " + isPalindromeStr(str));
+        System.out.println(str + " - " + isPalindromeStr2(str));
     }
 }
